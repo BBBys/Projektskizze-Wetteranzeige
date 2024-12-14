@@ -26,7 +26,9 @@ Oder den vorhandenen Key benutzen und nicht häufiger als alle 120 Sekunden abfr
 ### ePaper-Display 
 [Anschlussschema für das ePaper-Display gibt es hier: github.com/BBBys/gpio_pinout_diagram_NEU.png](https://github.com/BBBys/BackupServer/blob/main/doc/gpio_pinout_diagram_NEU.png)
 
-(Bilder/b1.jpg)
+Anleitungen und Software vom Hersteller gibt es hier: [github.com/waveshareteam/e-Paper](https://github.com/waveshareteam/e-Paper/tree/master/RaspberryPi_JetsonNano)
+
+[so könnte es aussehen](Bilder/b1.jpg)
 
 ### BME280 verbinden
 - **VCC** (3.3V) -&gt; VIN des Sensors
