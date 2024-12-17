@@ -6,7 +6,12 @@
 	-	Innen: Temperatur, Druck, Feuchtigkeit von einem BME280-Sensor
 - Aufbereitung auf einem Raspberry Pico W
 - Ausgabe auf einem ePaper-Display
-- ## Datenfluss
+
+so könnte es aussehen:
+![so könnte es aussehen](Bilder/b1.jpg)
+
+
+## Datenfluss
 ```mermaid
 stateDiagram-v2
    Pico : Pico W
@@ -18,11 +23,11 @@ stateDiagram-v2
    Pico --> ep : Anzeige
    owm --> Pico : JSON-Data
 ```
-## Beispiel
-Temperatur/Feuchtigkeit/Druck mit BME280 und Raspberry Pico, Verdrahtung und Python-Code:
+## Beispiele
+Ein (fremdes) Beispiel zur Anzeige von Temperatur, Feuchtigkeit, Druck mit BME280-Sensor und Raspberry Pico, Verdrahtung und Python-Code (aber anderes Display):
 [github.com/M3taKn1ght/Pico_Weather](https://github.com/M3taKn1ght/Blog-Repo/tree/4c335d607f1807069b7e363c63774db7aa2e01ab/Pico_Weather)
 
-Temperatur/Feuchtigkeit/Druck und Wetteranzeige mit Vorhersage mit BME280, Open Weather Map und Raspberry Zero, Python-Code:
+Ein (altes eigenes) Beispiel zur Anzeige von Temperatur, Feuchtigkeit, Druck und Wetteranzeige mit Vorhersage mit BME280-Sensor, ePaper-Dsiplay, Daten von Open Weather Map und Raspberry Zero, Python-Code:
 [github.com/BBBys/THBServer](https://github.com/BBBys/THBServer)
 
 ## Vorbereitung
@@ -34,12 +39,11 @@ Oder den vorhandenen Key benutzen und nicht häufiger als alle 120 Sekunden abfr
 Allerdings werden die Daten von OpenWeatherMap auch nur alle 15 Minuten bereitgestellt, glaube ich - also bringt öfter als alle 900 Sekunden nichts Neues.
 ## Hardware
 ### ePaper-Display 
-[Anschlussschema für das ePaper-Display gibt es hier: github.com/BBBys/gpio_pinout_diagram_NEU.png](https://github.com/BBBys/BackupServer/blob/main/doc/gpio_pinout_diagram_NEU.png)
+Ein Anschlussschema für das ePaper-Display **am Raspberry Pi** gibt es hier [Anschlussschema für das ePaper-Display github.com/BBBys/gpio_pinout_diagram_NEU.png](https://github.com/BBBys/BackupServer/blob/main/doc/gpio_pinout_diagram_NEU.png)
+![Anschlussschema für das ePaper-Display github.com/BBBys/gpio_pinout_diagram_NEU.png](https://github.com/BBBys/BackupServer/blob/main/doc/gpio_pinout_diagram_NEU.png)
+am Raspberi Pico sollte es ähnlich aussehen.
 
 Anleitungen und Software vom Hersteller gibt es hier: [github.com/waveshareteam/e-Paper](https://github.com/waveshareteam/e-Paper/tree/master/RaspberryPi_JetsonNano)
-
-[so könnte es aussehen](Bilder/b1.jpg)
-
 ### BME280 verbinden
 - **VCC** (3.3V) -&gt; VIN des Sensors
 - **GND** -&gt; GND des Sensors
