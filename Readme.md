@@ -1,4 +1,5 @@
 # Skizze: Anzeige von Wetterdaten 
+
 ## Ziel
 - Abfrage von Wetter/Klimadaten
 	-	Aussen: Temperatur, Feuchtigkeit, Wind, Luftdruck von OpenWeatherMap
@@ -17,11 +18,20 @@ stateDiagram-v2
    Pico --> ep : Anzeige
    owm --> Pico : JSON-Data
 ```
+## Beispiel
+Temperatur/Feuchtigkeit/Druck mit BME280 und Raspberry Pico, Verdrahtung und Python-Code:
+[github.com/M3taKn1ght/Pico_Weather](https://github.com/M3taKn1ght/Blog-Repo/tree/4c335d607f1807069b7e363c63774db7aa2e01ab/Pico_Weather)
+
+Temperatur/Feuchtigkeit/Druck und Wetteranzeige mit Vorhersage mit BME280, Open Weather Map und Raspberry Zero, Python-Code:
+[github.com/BBBys/THBServer](https://github.com/BBBys/THBServer)
+
 ## Vorbereitung
 API-Key von OpenWetherMap besorgen: auf https://openweathermap.org/price unter **Free** --> *Get API Key* anmelden. Abfragelimit auf unter 1000 setzen, dann 
 fallen keine Kosten an. Im Programm nicht schneller als im Abstand von 90 Sekunden abfragen.
 
 Oder den vorhandenen Key benutzen und nicht häufiger als alle 120 Sekunden abfragen.
+
+Allerdings werden die Daten von OpenWeatherMap auch nur alle 15 Minuten bereitgestellt, glaube ich - also bringt öfter als alle 900 Sekunden nichts Neues.
 ## Hardware
 ### ePaper-Display 
 [Anschlussschema für das ePaper-Display gibt es hier: github.com/BBBys/gpio_pinout_diagram_NEU.png](https://github.com/BBBys/BackupServer/blob/main/doc/gpio_pinout_diagram_NEU.png)
@@ -43,9 +53,8 @@ Zambretti-Algorithmus: [Quelle 1](https://github.com/sassoftware/iot-zambretti-w
 [Quelle 2](https://integritext.net/DrKFS/zambretti.htm)
 
 ## Quellen
-* [1 Implementierung auf einem Raspberry Nano](https://github.com/BBBys/THBServer)
+* [1 Wetterdaten von OpenWeatherMap](https://www.kampis-elektroecke.de/raspberry-pi/raspberry-pi-wetter/)
 * [2 Anschluss ePaper-Display](https://www.az-delivery.de/en/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/e-paper-display-am-esp32-und-esp8266-teil1)
 * [3 Datenabruf und Auswertung](https://microcontrollerslab.com/raspberry-pi-pico-w-openweathermap-api-sensorless-weather-station)
 * [4 BME280-Bibliothek](https://learn.microsoft.com/en-us/dotnet/api/iot.device.bmxx80.bme280?view=iot-dotnet-latest)
 * [5 BME280-Anschluss](https://learn.microsoft.com/en-us/dotnet/iot/tutorials/temp-sensor)
-* [6 Wetterdaten von OpenWeatherMap](https://www.kampis-elektroecke.de/raspberry-pi/raspberry-pi-wetter/)
