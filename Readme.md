@@ -44,19 +44,23 @@ Ein Anschlussschema für das ePaper-Display **am Raspberry Pi** gibt es hier [An
 am Raspberi Pico sollte es ähnlich aussehen.
 
 Anleitungen und Software vom Hersteller gibt es hier: [github.com/waveshareteam/e-Paper](https://github.com/waveshareteam/e-Paper/tree/master/RaspberryPi_JetsonNano)
-### BME280 verbinden
+### BME280 
+#### Unterlagen
+Deutsches eBook mit Einrichtungsanleitung [bei AZ Delivery](https://www.az-delivery.de/products/gy-bme280-kostenfreies-e-book)
+
+#### verbinden
 - **VCC** (3.3V) -&gt; VIN des Sensors
 - **GND** -&gt; GND des Sensors
 - **SDA** (GPIO 2) -&gt; SDA des Sensors
 - **SCL** (GPIO 3) -&gt; SCL des Sensors
 ## Software
-- Micro Python
-- C#
+- Micro Python [hier](MicroPython)
+- C# [hier](C#)
 ### Wetter-Vorhersage
 Zambretti-Algorithmus: [Quelle 1](https://github.com/sassoftware/iot-zambretti-weather-forcasting.git) und
 [Quelle 2](https://integritext.net/DrKFS/zambretti.htm)
 
-## Quellen
+## mehr Quellen
 * [1 Wetterdaten von OpenWeatherMap](https://www.kampis-elektroecke.de/raspberry-pi/raspberry-pi-wetter/)
 * [2 Anschluss ePaper-Display](https://www.az-delivery.de/en/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/e-paper-display-am-esp32-und-esp8266-teil1)
 * [3 Datenabruf und Auswertung](https://microcontrollerslab.com/raspberry-pi-pico-w-openweathermap-api-sensorless-weather-station)
