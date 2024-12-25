@@ -44,8 +44,11 @@ Allerdings werden die Daten von OpenWeatherMap auch nur alle 15 Minuten bereitge
 ## Hardware
 ### 1. Rapberry Pico
 Wie bekannt, aber dieser mir WLAN
-### 2. Anschlussboard
+### 2. Anschlussboard (HAT)
 ... statt Breadboard. Vorteil: Die Pico-Pins sind beschriftet und auf der Leiste genauso angeordnet wie bei einem großen Raspberry.
+
+Das ePaper-Display **und** der Sensor benötigen **beide** die 3,3 V-Versorgungsspannung. Das HAT hat dafür zwei 3,3-V-Pins, Nr. 1 und 17, beide gelb unterlegt. Nicht die 5-V-Pins nehmen!
+
 ### 3. ePaper-Display 
 Ein Anschlussschema für das ePaper-Display **am Raspberry Pi** gibt es hier [Anschlussschema für das ePaper-Display github.com/BBBys/gpio_pinout_diagram_NEU.png](https://github.com/BBBys/BackupServer/blob/main/doc/gpio_pinout_diagram_NEU.png)
 ![Anschlussschema für das ePaper-Display github.com/BBBys/gpio_pinout_diagram_NEU.png](https://github.com/BBBys/BackupServer/blob/main/doc/gpio_pinout_diagram_NEU.png)
